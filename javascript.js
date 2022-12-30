@@ -24,5 +24,7 @@ function playRound(playerSelection, computerSelection) {
         return "You Lose! Rock beats scizzors.";
     } else if (playerSelection.toUpperCase() === "SCIZZORS" && computerSelection.toUpperCase() === "PAPER") {
         return "You win! Scizzors beats paper.";
-    };
+    } else if (playerSelection.toUpperCase() != "ROCK" || "PAPER" || "SCIZZORS") {
+        return "Error, please enter one of: Rock, Paper, or Scizzors.";
+    }
 }
