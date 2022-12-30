@@ -33,16 +33,19 @@ function game() {
     let wins = 0;
     let loses = 0;
     for (let i = 0; i < 5; i++) {
-        let playerSelection = prompt("Enter one of: Rock, Paper, Scissors.");
+        let playerSelection = prompt("Enter one of: Rock, Paper, or Scissors.");
         let computerSelection = getComputerChoice();
         let result = playRound(playerSelection, computerSelection);
         console.log(result);
 
-        if (result.slice(0,8) === "You Win!") {
+        if (result.slice(0,5) == "Error") {
+            i = i - 1;
+        } else if (result.slice(0,8) === "You Win!") {
             wins = wins + 1;
         } else if (result.slice(0,9) === "You Lose!") {
             loses = loses + 1;
         };
+
         console.log(wins);
         console.log(loses);
     }
