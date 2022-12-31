@@ -15,13 +15,13 @@ function playRound(playerSelection, computerSelection) {
     } else if (playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "PAPER") {
         return "You Lose! Paper beats rock.";
     } else if (playerSelection.toUpperCase() === "ROCK" && computerSelection.toUpperCase() === "SCISSORS") {
-        return "You Win! Rock beats Scissors.";
+        return "You Win! Rock beats scissors.";
     } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() == "ROCK") {
         return "You Win! Paper beats rock.";
     } else if (playerSelection.toUpperCase() === "PAPER" && computerSelection.toUpperCase() === "SCISSORS") {
         return "You Lose! Scissors beats paper.";
     } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "ROCK") {
-        return "You Lose! Rock beats Scissors.";
+        return "You Lose! Rock beats scissors.";
     } else if (playerSelection.toUpperCase() === "SCISSORS" && computerSelection.toUpperCase() === "PAPER") {
         return "You Win! Scissors beats paper.";
     } else if (playerSelection.toUpperCase() != "ROCK" || "PAPER" || "SCISSORS") {
@@ -46,15 +46,13 @@ function game() {
             loses = loses + 1;
         };
 
-        console.log(wins);
-        console.log(loses);
     }
 
     if (wins > loses) {
-        return "Congratulations, you won!";
+        return `Congratulations, you won! Final Score: ${wins} to ${loses}.`
     } else if (wins === loses) {
-        return "Tie Game";
+        return `Tie Game. Fnial Score: ${wins} to ${loses}.`
     } else if (loses > wins) {
-        return "Sorry, you lost."
+        return `Sorry, you lost. Final Score: ${wins} to ${loses}.`
     };
 }
