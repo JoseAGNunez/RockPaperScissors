@@ -31,7 +31,7 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     let wins = 0;
-    let loses = 0;
+    let losses = 0;
     for (let i = 0; i < 5; i++) {
         let playerSelection = prompt("Enter one of: Rock, Paper, or Scissors.");
         let computerSelection = getComputerChoice();
@@ -43,16 +43,16 @@ function game() {
         } else if (result.slice(0,8) === "You Win!") {
             wins = wins + 1;
         } else if (result.slice(0,9) === "You Lose!") {
-            loses = loses + 1;
+            losses = losses + 1;
         };
 
     }
 
-    if (wins > loses) {
-        return `Congratulations, you won! Final Score: ${wins} to ${loses}.`
-    } else if (wins === loses) {
-        return `Tie Game. Fnial Score: ${wins} to ${loses}.`
-    } else if (loses > wins) {
-        return `Sorry, you lost. Final Score: ${wins} to ${loses}.`
+    if (wins > losses) {
+        return `Congratulations, you won! Final Score: ${wins} to ${losses}.`
+    } else if (wins === losses) {
+        return `Tie Game. Fnial Score: ${wins} to ${losses}.`
+    } else if (losses > wins) {
+        return `Sorry, you lost. Final Score: ${wins} to ${losses}.`
     };
 }
